@@ -4,50 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script async src="script.js"></script>
     <title>ColorPicker</title>
 </head>
 <body>
     <div class="container">
         <div class="select-color">
-            <input type="color">
-            <button class="dropdown-btn">
-                <p>Placeholder text</p>
-                <img src="" alt="">
-            </button>
-            <div class="scheme-dropdown" id="dropdown">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-            </div>
-            <button class="submit-btn" id="submit">Get color scheme</button>
+            <input type="color" value="#ff0000" id="selected-color">
+            <select name="color-scheme" id="color-scheme-selection" class="dropdown btn">
+                <option value="monochrome">monochrome</option>
+                <option value="monochrome-dark">monochrome-dark</option>
+                <option value="monochrome-light">monochrome-light</option>
+                <option value="analogic">analogic</option>
+                <option value="complement">complement</option>
+                <option value="analogic-complement">analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button class="submit-btn btn" id="submit">Get color scheme</button>
         </div>
-        <div class="results">
-            <div class="result-color">
-                <div class="bar"></div>
-                <div class="hex">#fffff</div>
-            </div>
-            <div class="result-color">
-                <div class="bar"></div>
-                <div class="hex">#fffff</div>
-            </div>
-            <div class="result-color">
-                <div class="bar"></div>
-                <div class="hex">#fffff</div>
-            </div>
-            <div class="result-color">
-                <div class="bar"></div>
-                <div class="hex">#fffff</div>
-            </div>
-            <div class="result-color">
-                <div class="bar"></div>
-                <div class="hex">#fffff</div>
-            </div>
+        <div class="bar-results">
+            <div class="bar result-color" id="base-color"></div>
+            <div class="bar result-color"></div>
+            <div class="bar result-color"></div>
+            <div class="bar result-color"></div>
+            <div class="bar result-color"></div>
+        </div>
+        <div class="hex-results">
+            <div class="hex">#fffff</div>
+            <div class="hex">#fffff</div>
+            <div class="hex">#fffff</div>
+            <div class="hex">#fffff</div>
+            <div class="hex">#fffff</div>
         </div>
     </div>
 </body>
