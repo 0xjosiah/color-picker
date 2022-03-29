@@ -12,10 +12,11 @@
     <title>ColorPicker</title>
 </head>
 <body>
+    <h1 id="title">Color</h1>
     <div class="container">
         <div class="select-color">
             <input type="color" value="#ff0000" id="selected-color">
-            <select name="color-scheme" id="color-scheme-selection" class="dropdown btn">
+            <select name="color-scheme" id="color-scheme-selection" class="dropdown">
                 <option value="monochrome">monochrome</option>
                 <option value="monochrome-dark">monochrome-dark</option>
                 <option value="monochrome-light">monochrome-light</option>
@@ -24,7 +25,7 @@
                 <option value="analogic-complement">analogic-complement</option>
                 <option value="triad">Triad</option>
             </select>
-            <button class="submit-btn btn" id="submit">Get color scheme</button>
+            <!-- <button class="submit-btn btn" id="submit">Get color scheme</button> -->
         </div>
         <div class="bar-results">
             <div class="bar result-color" id="base-color"></div>
