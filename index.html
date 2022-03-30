@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script async src="script.js"></script>
+    <link rel="stylesheet" href="toast.css">
+    <script async src="script.js" type="module"></script>
     <title>ColorPicker</title>
 </head>
 <body>
-    <h1 id="title">Color</h1>
+    <h1 id="title">Colour</h1>
+    <div class="filter"></div>
     <div class="container">
+        <div class="instructions">
+            <h3 id="step1">Select a color</h3>
+            <h3 id="step2">Select a scheme</h3>
+        </div>
         <div class="select-color">
-            <input type="color" value="#ff0000" id="selected-color">
+            <input type="color" value="#ff0000" id="selected-color" name="color-input" placeholder="pick a color">
             <select name="color-scheme" id="color-scheme-selection" class="dropdown">
                 <option value="monochrome">monochrome</option>
                 <option value="monochrome-dark">monochrome-dark</option>
@@ -25,22 +31,22 @@
                 <option value="analogic-complement">analogic-complement</option>
                 <option value="triad">Triad</option>
             </select>
-            <!-- <button class="submit-btn btn" id="submit">Get color scheme</button> -->
         </div>
         <div class="bar-results">
-            <div class="bar result-color" id="base-color"></div>
-            <div class="bar result-color"></div>
-            <div class="bar result-color"></div>
-            <div class="bar result-color"></div>
-            <div class="bar result-color"></div>
+            <div class="color-bar" id="base-color" data-color-target="#seedColor"></div>
+            <div class="color-bar" data-color-target="#color1"></div>
+            <div class="color-bar" data-color-target="#color2"></div>
+            <div class="color-bar" data-color-target="#color3"></div>
+            <div class="color-bar" data-color-target="#color4"></div>
         </div>
         <div class="hex-results">
-            <div class="hex">#fffff</div>
-            <div class="hex">#fffff</div>
-            <div class="hex">#fffff</div>
-            <div class="hex">#fffff</div>
-            <div class="hex">#fffff</div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
         </div>
+        <h3 id="step3">Click on a color bar to copy it to your clipboard</h3>
     </div>
 </body>
 </html>
